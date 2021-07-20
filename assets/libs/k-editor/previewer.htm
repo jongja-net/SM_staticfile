@@ -1,0 +1,85 @@
+<div class="preview-body">
+	<div class="btn-group" role="group" aria-label="...">
+		<button type="button" class="btn btn-default dlgCustomNameFind"><i class="fa fa-book" aria-hidden="true"></i> 이름관리자</button>
+        <button type="button" class="btn btn-default ubprint"><i class="fa fa-print" aria-hidden="true"></i> 인쇄</button>
+		<button type="button" class="btn btn-default setDataBind"><i class="fa fa-refresh txtGreen" aria-hidden="true"></i> 데이터 새로고침</button>
+		<button type="button" class="btn btn-default viewClose"><i class="fa fa-sign-out" aria-hidden="true"></i> 닫기</button>
+	</div>
+
+	<div class="keditorPreview"></div>
+</div>
+
+<script>
+	(function () {
+	   	/* 공통역역  ------------ start ----------------- */
+		var
+			 dform = $(document.body).find('> .ke-previewer')
+			,kid   = dform.attr("keditor")
+		;
+
+		var el =Jinja.KEditors[kid];
+	   	/* 공통역역  ------------ end ----------------- */
+
+		var
+			pvKE01 = $(".keditorPreview", dform)
+		;
+
+		$('button.load',dform).click(function(e){
+			var json = el.toJson();
+			var responseText = JSON.stringify(json);
+
+			json = JSON.parse(responseText);
+
+			pvKE01.KEditor("fromJson", json);
+		});
+
+        $('button.print',dform).click(function(e){
+            pvKE01.KEditor("printDoc");
+
+        });
+        $('button.ubprint',dform).click(function(e){
+            pvKE01.KEditor("setupUbiReport");
+
+        });
+        
+		$('button.viewClose',dform).click(function(e){
+			dform.remove();
+			delete el.modals["previewer"];
+
+		});
+
+		$('button.dlgCustomNameFind',dform).click(function(e){
+			pvKE01.KEditor("dlgCustomNameFind");
+
+		});
+
+		$('button.setDataBind',dform).click(function(e){
+			pvKE01.KEditor("clearDataBind");
+			pvKE01.KEditor("setDataBind");
+
+		});
+
+		pvKE01.KEditor({
+			//valblFormatTmplatNo: "99920160000286",
+			bEditMode: false,
+			height: "1600px",
+			width: "98%",
+			loadCallBack: function(e) {
+				var json = el.toJson();
+				var responseText = JSON.stringify(json);
+
+				json = JSON.parse(responseText);
+
+				pvKE01.KEditor("fromJson", json);
+			}
+		});
+
+		return {
+            whois: function () {
+                /* 함수사용법을 정의합니다*/
+                alert("폼속성입니다");
+                return "jj";
+            }
+        }
+    }).call(this);
+</script>

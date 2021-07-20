@@ -1,0 +1,18 @@
+﻿[
+  {
+    "ID": "efc8878d-6607-41ed-a370-0060b5d323cb",
+    "PARENT_ID": "1bec1147-ccc5-48f7-b6d0-4e6293071497",
+    "NAME": "getResource2.sql",
+    "TYPE": "sql",
+    "ICON": null,
+    "URI": "getResource2.sql",
+    "BODY": "{\r\n  \"sql\": \"SELECT \\n   ID \\n  ,NAME \\n  ,TYPE \\n  ,URI \\n  ,STATUS \\n  ,ICON \\n  ,VERSION\\n  ,EDT_DATETIME \\n  ,EDT_USER_ID \\n  ,EDT_USER_NAME \\n FROM jj_resource \\n WHERE TYPE  = 'page'\",\r\n  \"datainfo\": {\r\n    \"workspace\": \"studio\",\r\n    \"table\": \"jj_resource\",\r\n    \"keyField\": \"ID\"\r\n  }\r\n}",
+    "VERSION": 1,
+    "LOCKER_ID": null,
+    "LOCKER_NAME": null,
+    "IMAGE": null,
+    "DESCRIPTION": null,
+    "DEPTH_NAME": "getResource2.sql",
+    "items": []
+  }
+]

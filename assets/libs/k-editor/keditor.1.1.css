@@ -1,0 +1,519 @@
+ .cell-drop-hover {
+    background-color: yellow!important;
+ }
+.cell-drop-active{
+    background-color: darkseagreen!important;
+
+}
+
+.KEDITOR .txtYellow {
+	color: yellow!important;
+}
+.KEDITOR .txtBlack {
+	color: black!important;
+}
+.KEDITOR .txtCyan {
+	color: cyan!important;
+}
+
+
+.KEDITOR .txtRed {
+	color: red!important;
+}
+.KEDITOR .txtBlue {
+	color: blue!important;
+}
+.KEDITOR .active[aria-command="editMode-table"],.KEDITOR .active[aria-command="editMode-pencil"] {
+	color: red!important;
+}
+
+
+.KEDITOR .ke-body {
+	width: 100%;
+	margin: auto;
+}
+
+.KEDITOR .spreadDocFrame{
+	width: 100%;
+	border: 1px solid gray;
+	margin: auto;
+	background-color:white;
+
+}
+
+.KEDITOR .tableTitle{
+	display:inline-block;;
+	width:100%;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+.KEDITOR .tableTitle label{
+	float: left;
+
+}
+.KEDITOR .docSheet ul{
+	    display: inline;
+}
+
+.KEDITOR .docSheet ul li{
+	float: left;
+	padding-left:10px;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+.KEDITOR .docSheet ul li:hover, .KEDITOR .docSheet ul li.active{
+	font-weight: bold;
+	color: red;
+}
+
+.KEDITOR .spreadJsonDocArea{
+	display:none;
+}
+
+
+.KEDITOR .customNameList{
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+
+.KEDITOR .dropdown-menu i.fa {
+	font-size: 16px;
+	margin-right: 5px;
+}
+
+.KEDITOR .txtGreen {
+	color: green;
+}
+
+.KEDITOR .keicon {
+	background: url("ke-icon.png") no-repeat left;
+    width: 39px;
+    height: 42px;
+    display: inline-block;
+    margin-bottom: -5px;
+    margin-left: 5px;
+}
+
+.KEDITOR .txtYellow:hover {
+	color: red;
+
+}
+
+.KEDITOR header h3 i{
+    padding: 5px;
+    color: green;
+    font-size: 32px;
+}
+
+.KEDITOR .dropdown-menu li[aria-command="backColor"]:hover,.dropdown-menu li[aria-command="fontColor"]:hover{
+	border: 1px dotted blue;
+}
+.KEDITOR .dropdown-menu li[aria-command="backColor"],.dropdown-menu li[aria-command="fontColor"]{
+	border: 1px solid whitesmoke;
+	font-size:12px;
+    text-align: center;
+}
+
+.KEDITOR .dropdown-menu .fa-caret-right{
+	float:right;
+}
+ .KEDITOR .spreadDocFrame .btn-toolbar{
+     padding: 0px 5px 5px 5px
+}
+ .KEDITOR .spreadDocFrame .btn-toolbar a.fontName{
+     width:100px;
+     overflow:hidden;
+}
+ .KEDITOR .spreadDocFrame .btn-toolbar input.formatter{
+     width:60px;
+     overflow:hidden;
+}
+.KEDITOR  .btn-toolbar .fa{
+    font-size: 13px;
+}
+.KEDITOR  .btn-toolbar .dropdown-menu.video{
+	width: 810px;
+    padding: 5px;
+}
+
+.KEDITOR  div.ui-widget{
+	z-index:1;
+}
+
+.KEDITOR  .btn-toolbar .btn.dropdown-toggle{
+     width: 10px;
+    padding-left: 5px;
+    padding-right: 13px;
+}
+
+.KEDITOR .option-row{
+    min-height: 30px;
+    padding: 0px 0px 5px 0px;
+}
+.KEDITOR .option-row .ui-resizable-handle:hover{
+	    background-color: darkgray;
+}
+
+.KEDITOR .option-row .nameBoxArea{
+	float: left;
+}
+
+.KEDITOR .option-row .nameBox{
+	border: 1px solid #808080;
+	width:160px;
+	float: left;
+	height:26px;
+	background-color: white;
+	border-radius: 0px;
+	color: black;
+}
+.KEDITOR .option-row .nameBoxBtn{
+    margin-left: 0px;
+    height: 26px;
+    padding: 0px 10px;
+}
+
+.KEDITOR .option-row .formulaBar{
+	border: 1px solid #808080;
+	margin-left:200px;
+ 	background-color: white;
+  	padding: 3px;
+    overflow-y: auto;
+    height:26px;
+    margin-bottom: 3px;
+}
+.KEDITOR .spreadDoc {
+	padding: 0px;
+	display:block;
+	width:100%;
+	height:400px;
+}
+
+#dropcell{
+ 	border: 2px solid blue;
+ 	background-color: #D8F0EE;
+ 	font-size:13px;
+ 	padding:5px;
+ 	display:none;
+ }
+#dropField{
+ 	border: 2px solid blue;
+ 	background-color: #D8F0EE;
+ 	font-size:13px;
+ 	padding:5px;
+ }
+.KEDITOR  input.btn {
+    padding: 4px 4px 5px 4px;
+    width: 50px;
+
+}
+
+ .KEDITOR a.fontColor label {
+ 	color: black;
+ 	background-color: white;
+ 	padding:1px;
+	padding: 0px 3px;
+    margin: 0px;
+ }
+
+.KEDITOR  .spreadDocFrame  .formulaBar .ui-resizable-s:hover{
+ 	    border-bottom: 2px solid red;
+ }
+
+
+.KEDITOR  .btn>span.caret {
+    padding-left: 0px;
+ }
+
+.modal-dialog.sql-bind .modal-body{
+    display: inline-block;
+    width: 100%;
+ }
+
+.modalBodyToggle{
+	color:gray;
+	margin-left:5px;
+}
+.modalBodyToggle:hover{
+	color:red;
+}
+
+
+ul[jj-role="query-list"] li:hover ,  ul[jj-role="query-tables"] li:hover
+  {
+      color: red;
+      cursor: pointer;
+  }
+
+
+ /* ------------------------------------------------------------------------
+    top menu    background-color: darkgray;
+ ------------------------------------------------------------------------- */
+
+
+
+ .MenuArea {
+	width: 100%;
+    display: inline-block;
+    font-size: 13px;
+}
+.ke-topmenu {
+ 	width: 100%;
+	background-color: #929ba7;
+    background-image: liner-gradient(top, #949daa 0%, #767f8d 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #949daa), color-stop(100%, #767f8d));
+    background-image: -ms-linear-gradient(top, #949daa 0%, #767f8d 100%);
+    background-image: -moz-linear-gradient(top, #949daa 0%, #767f8d 100%);
+    border: 1px solid #565f6c;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.ke-topmenu .nav .open>a, .ke-topmenu .nav .open>a:focus, .ke-topmenu .nav .open>a:hover {
+    background-color: transparent;
+    border-color: #337ab7;
+}
+.ke-topmenu > ul.nav.navbar-nav {
+  padding: 3px 0px;
+  margin: 0;
+  text-shadow: initial;
+  width: 100%;
+}
+.ke-topmenu > ul.nav.navbar-nav > li {
+  padding: 0px 0px;
+  margin: 0;
+  background-color: transparent;
+}
+.ke-topmenu > ul.nav.navbar-nav > li > a {
+  padding: 2px 15px;
+  margin: 0;
+  color: white;
+  background-color: transparent;
+}
+.ke-topmenu > ul.nav.navbar-nav > li > a:hover {
+  background-color: rgb(128, 128, 128); /* transparent ; */
+  /*color:white;*/
+  margin: 0;
+}
+.ke-topmenu > ul.nav.navbar-nav > li > .dropdown-menu {
+  display: none;
+   -moz-animation: slide 1s ease 3.5s forwards;
+   -webkit-animation: slide 1s ease 3.5s forwards;
+   -o-animation: slide 1s ease 3.5s forwards;
+   -ms-animation: slide 1s ease 3.5s forwards;
+    animation: slide 1s ease 3.5s forwards;
+}
+.ke-topmenu > ul.nav.navbar-nav > li.dropdown:hover {
+  /*XXbackground-color: #4b4b4b ;*/
+  /*color: white;*/
+}
+.ke-topmenu > ul.nav.navbar-nav > li.dropdown:hover > .dropdown-menu {
+ /* display: block; */
+  /*background-color: #f2dede ;*/
+  color: white;
+
+}
+.ke-topmenu > ul.nav.navbar-nav li.dropdown-submenu:hover {
+  /*background-color: #dff0d8;*/
+}
+.ke-topmenu > ul.nav.navbar-nav li.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+.ke-topmenu > ul.nav.navbar-nav li.dropdown-submenu {
+  position: relative;
+}
+.ke-topmenu > ul.nav.navbar-nav li.dropdown-submenu > .dropdown-menu {
+  float: left;
+  left: 100%;
+  top: 2px;
+}
+.ke-topmenu > ul.nav.navbar-nav span.glyphicon {
+  margin-right: 10px;
+  min-width: 20px;
+}
+
+.ke-topmenu .btn{
+     background-color: #929ba7;
+    background-image: liner-gradient(top, #949daa 0%, #767f8d 100%);
+    /* background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #949daa),
+ color-stop(100%, #767f8d)); */
+    background-image: -ms-linear-gradient(top, #949daa 0%, #767f8d 100%);
+    background-image: -moz-linear-gradient(top, #949daa 0%, #767f8d 100%);
+    border: 1px solid gray;
+    /* display: inline-block; */
+    padding: 5px 10px 5px 10px;
+    color: #fff;
+    /* text-decoration: none; */
+    /* border-radius: 2px; */
+    /* box-shadow: 1px 2px 2px rgba(0, 0, 0, .30); */
+    cursor: pointer;
+    margin-left: 5px;
+}
+ /* ------------------------------------------------------------------------
+
+ ------------------------------------------------------------------------- */
+
+ .KEDITOR .wijspread-popup .btn{
+ 	padding: 0px;
+    color: black;
+ }
+ .KEDITOR .wijspread-popup #filterOK{
+    margin-left: 10px;
+ }
+
+ .KEDITOR .wijspread-popup #filterOK{
+    margin-left: 10px;
+ }
+.KEDITOR .docFindList {
+	display: inline-block;
+    width: 100%;
+    min-height: 200px;
+     max-height: 400px;
+    overflow: auto;
+    margin-top: 20px;
+ }
+
+
+ .KEDITOR .docFindList .thumbnail {
+	background: url("ke-icon.png") no-repeat left;
+	margin: 0px;
+	border: 1px solid white;
+ }
+
+ .KEDITOR .docFindList .thumbnail.active {
+	background-color: antiquewhite;
+ }
+
+ .KEDITOR .docFindList .thumbnail .caption  {
+     margin-left: 30px;
+ }
+ .KEDITOR .docFindList .thumbnail h3 {
+	margin: 0px;
+	font-size: 14px;
+ }
+ .KEDITOR .docFindList .thumbnail h3:hover {
+ 	color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+ }
+
+
+ /* ------------------------------------------------------------------------
+
+ ------------------------------------------------------------------------- */
+ .modal[name='dlgCustomNameFind'] .modal-body{
+ 	display: inline-block;
+ }
+ .modal[name='dlgCustomNameFind'] .customNameFindList{
+ 	padding: 3px;
+	height: 300px;
+    overflow-y: auto;
+ }
+ .modal[name='dlgCustomNameFind'] .customNameFindList .thumbnail{
+    width: 100%;
+    /* padding: 5px; */
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+ }
+  .modal[name='dlgCustomNameFind'] .customNameFindList .thumbnail .btn{
+    padding: 2px 10px 3px;
+    /* padding-bottom: 2px; */
+   /* margin-top: -8px; */
+ }
+
+ .customNameFindHead {
+     display: block;
+    /* height: 30px; */
+    width: 100%;
+    display: inline-block;
+    margin-top: 20px;
+ }
+ .customNameFindHead label {
+ 	float:left;
+    text-align: center;
+    font-size: 14px;
+	padding: 5px;
+ }
+ .modal[name='dlgCustomNameFind'] .customNameFindList .thumbnail .c-name, .customNameFindHead .c-name{
+    margin-top: -5px;
+    width:30%
+ }
+ .modal[name='dlgCustomNameFind'] .customNameFindList .thumbnail .c-cell, .customNameFindHead .c-cell{
+    margin-top: -5px;
+    width:20%
+ }
+ .modal[name='dlgCustomNameFind'] .customNameFindList .thumbnail .c-formula, .customNameFindHead .c-formula{
+    margin-top: -5px;
+    width:20%
+ }
+ .modal[name='dlgCustomNameFind'] .customNameFindList .thumbnail .c-value, .customNameFindHead .c-value{
+    margin-top: -5px;
+    width:30%
+
+ }
+ .modal[name='dlgCustomNameFind'] .customNameFindList .thumbnail .c-value input{
+    width:100px;
+
+ }
+
+ .modal[name='dlgDataSetFind'] .customNameFindList .thumbnail .c-name, .customNameFindHead .c-name{
+    margin-top: -5px;
+    width:30%
+ }
+ .modal[name='dlgDataSetFind'] .customNameFindList .thumbnail .c-cell, .customNameFindHead .c-cell{
+    margin-top: -5px;
+    width:20%
+ }
+ .modal[name='dlgDataSetFind'] .customNameFindList .thumbnail .c-formula, .customNameFindHead .c-formula{
+    margin-top: -5px;
+    width:20%
+ }
+ .modal[name='dlgDataSetFind'] .customNameFindList .thumbnail .c-value, .customNameFindHead .c-value{
+    margin-top: -5px;
+    width:30%
+
+ }
+ .modal[name='dlgDataSetFind'] .customNameFindList .thumbnail .c-value input{
+    width:100px;
+
+ }
+
+
+ /* ------------------------------------------------------------------------
+
+ ------------------------------------------------------------------------- */
+ .ke-previewer {
+    background-color: whitesmoke;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    border: 5px solid cadetblue;
+    margin: 1px;
+
+}
+ .ke-previewer .preview-body{
+	text-align: center;
+    padding: 10px;
+ }
+
+
+ .keditorPreview .spreadDoc  .scroll-arrow{
+ 	right: 0px;
+ }
+ .keditorPreview .spreadDoc  .scroll-wrapper{
+ 	right: 8px;
+ }
+ .keditorPreview .spreadDoc .scroll-bar{
+ 	right: 8px;
+ }
+
+
+

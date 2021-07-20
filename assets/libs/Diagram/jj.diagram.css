@@ -1,0 +1,450 @@
+/* --------------------------------------------
+    shapes
+---------------------------------------------- */
+ li.shapeItem {
+  float: left;
+  width: 30px;
+  height: 30px;
+  z-index: 1100;
+}
+ .sh {
+  background-position: 5px center;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  margin: 3px;
+}
+ .sh.connector {
+    background-image: url('/appspeed/images/shapes/connector.png');
+ }
+ .sh.data {
+  background-image: url('/appspeed/images/shapes/data.png');
+}
+ .sh.down-arrow-callout {
+  background-image: url('/appspeed/images/shapes/down-arrow-callout.png');
+}
+ .sh.flow-right-arrow {
+  background-image: url('/appspeed/images/shapes/flow-right-arrow.png');
+}
+ .sh.internal-storage {
+  background-image: url('/appspeed/images/shapes/internal-storage.png');
+}
+ .sh.left-arrow-callout {
+  background-image: url('/appspeed/images/shapes/left-arrow-callout.png');
+}
+ .sh.left-right-arrow-callout {
+  background-image: url('/appspeed/images/shapes/left-right-arrow-callout.png');
+}
+ .sh.line-callout-2 {
+  background-image: url('/appspeed/images/shapes/line-callout-2.png');
+}
+ .sh.manual-input {
+  background-image: url('/appspeed/images/shapes/manual-input.png');
+}
+ .sh.off-page-connector {
+  background-image: url('/appspeed/images/shapes/off-page-connector.png');
+}
+ .sh.process {
+  background-image: url('/appspeed/images/shapes/process.png');
+}
+ .sh.punched-tape {
+  background-image: url('/appspeed/images/shapes/punched-tape.png');
+}
+ .sh.quad-arrow-callout {
+  background-image: url('/appspeed/images/shapes/quad-arrow-callout.png');
+}
+ .sh.rectangular-callout {
+  background-image: url('/appspeed/images/shapes/rectangular-callout.png');
+}
+ .sh.right-arrow {
+  background-image: url('/appspeed/images/shapes/right-arrow.png');
+}
+ .sh.right-triangle {
+  background-image: url('/appspeed/images/shapes/right-triangle.png');
+}
+ .sh.round-callout {
+  background-image: url('/appspeed/images/shapes/round-callout.png');
+}
+ .sh.round-rectangle {
+  background-image: url('/appspeed/images/shapes/round-rectangle.png');
+}
+ .sh.sort {
+  background-image: url('/appspeed/images/shapes/sort.png');
+}
+ .sh.storage {
+  background-image: url('/appspeed/images/shapes/storage.png');
+}
+ .sh.triangle {
+  background-image: url('/appspeed/images/shapes/triangle.png');
+}
+ .sh.up-down-arrow-callout {
+  background-image: url('/appspeed/images/shapes/up-down-arrow-callout.png');
+}
+ .sh.form {
+  background-image: url('/appspeed/images/shapes/storage.png');
+}
+ .sh.word {
+  background-image: url('/appspeed/images/shapes/data.png');
+}
+ .sh.page {
+  background-image: url('/appspeed/images/shapes/storage.png');
+}
+ .sh.memo {
+  background-image: url('/appspeed/images/shapes/process.png');
+}
+ .sh.img {
+  background-image: url('/appspeed/images/shapes/punched-tape.png');
+}
+ .sh.file-box-icon {
+  background-position: center 5px;
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+  margin: 3px;
+  background-image: url('/hr/NUSS_UI/hr/p/jj/image/files/1458923171_icon-55-document-text.png');
+}
+ .file-box-icon.doc {
+  background-image: url('/hr/NUSS_UI/hr/p/jj/image/files/1458923495_word.png');
+}
+ .file-box-icon.ppt {
+  background-image: url('/hr/NUSS_UI/hr/p/jj/image/files/1458923489_powerpoint.png');
+}
+ .file-box-icon.xls {
+  background-image: url('/hr/NUSS_UI/hr/p/jj/image/files/1458923484_excel.png');
+}
+ .file-box-icon.pdf {
+  background-image: url('/hr/NUSS_UI/hr/p/jj/image/files/1458923502_pdf.png');
+}
+ .file-box-icon.hwp {
+  background-image: url('/hr/NUSS_UI/hr/p/jj/image/files/hwp.png');
+}
+ .diagram {
+  /*width: 100%;*/
+  height: 100%;
+}
+
+ .diagram .dataTrash {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  vertical-align: middle;
+}
+  .diagram .info{
+      background-color:yellow;
+      float:right;
+      position:absolute;
+      top:5px;
+      right:5px;
+  }
+
+ .diagram ul[jj-role="document-list"] {
+  height: 200px;
+  overflow: hidden;
+}
+ .diagram .shapes {
+     border-right: 0px solid #2e6f9a;
+ }
+ 
+ .diagram .mainArea {
+     border-left: 1px solid #2e6f9a;
+     overflow:auto;
+ }
+ .diagram .shapes ul {
+  display: inline-block;
+}
+ .diagram.win-drag {
+  background-color: antiquewhite!important;
+}
+ .diagram .sh.word {
+  background-image: none;
+  min-height: 100px;
+  min-width: 200px;
+  border-color: transparent;
+  text-align: left;
+  cursor: initial;
+  display: inline-table;
+  padding: 0;
+  padding-top: 10px;
+  border: 0;
+}
+ .diagram .sh.word .drag-handle {
+  background-color: #d9edf7;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 10px;
+  border: 1px solid #2e6f9a;
+  border-width: 1px 1px 0px 1px;
+  display: none;
+}
+ .diagram .sh.word .word-body {
+  border: 1px solid transparent;
+  border-width: 0px 1px 1px 1px;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+ .diagram .sh.word .ui-resizable-handle {
+  /*display:none;*/
+}
+ .diagram .sh.word .edit {
+  min-width: 300px;
+  min-height: 200px;
+}
+ .diagram .sh.word:hover .drag-handle {
+  display: block;
+}
+ .diagram .sh.word:hover .word-body {
+  border-color: #2e6f9a;
+}
+ .diagram .sh.memo {
+  background-image: none;
+  min-height: 100px;
+  min-width: 300px;
+  border-color: transparent;
+  text-align: left;
+  cursor: initial;
+  padding: 10px 0px 0px 0px;
+  padding-top: 10px;
+  display: inline-table;
+}
+ .diagram .sh.memo .ui-resizable-handle {
+  /*display:none;*/
+}
+ .diagram .sh.memo textarea {
+  background-color: #FCFBB6;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+  padding: 5px;
+  border: 1px solid #2e6f9a;
+  border-width: 1px 1px 1px 1px;
+}
+ .diagram .sh.memo .drag-handle {
+  background-color: #d9edf7;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 10px;
+  border: 1px solid #2e6f9a;
+  border-width: 1px 1px 0px 1px;
+  display: none;
+}
+ .diagram .sh.memo:hover .drag-handle {
+  display: block;
+}
+ .diagram .sh.memo:hover textarea {
+  border-top: 1px solid transparent;
+}
+ .diagram .sh.img {
+  background-image: none;
+  min-height: 100px;
+  min-width: 100px;
+  border-color: transparent;
+  text-align: left;
+  cursor: initial;
+  padding: 10px 0px 0px 0px;
+  padding-top: 10px;
+  display: inline-table;
+  opacity: 1;
+}
+ .diagram .sh.img .ui-resizable-handle {
+  /*display:none;*/
+}
+ .diagram .sh.img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+}
+ .diagram .sh.img .drag-handle {
+  background-color: aquamarine;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-width: 1px 1px 0px 1px;
+}
+ .diagram .sh.youtube,
+ .diagram .sh.facebook {
+  background-image: none;
+  min-height: 100px;
+  min-width: 100px;
+  border-color: transparent;
+  text-align: left;
+  cursor: initial;
+  padding: 10px 0px 0px 0px;
+  padding-top: 10px;
+  display: inline-table;
+  opacity: 1;
+}
+ .diagram .sh.youtube .ui-resizable-handle,
+ .diagram .sh.facebook .ui-resizable-handle {
+  /*display:none;*/
+}
+ .diagram .sh.youtube .drag-handle,
+ .diagram .sh.facebook .drag-handle {
+  background-color: #d9edf7;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 10px;
+  border: 1px solid #2e6f9a;
+  border-width: 1px 1px 0px 1px;
+  display: none;
+}
+ .diagram .sh.youtube:hover .drag-handle {
+  display: block;
+}
+ .diagram .sh.file {
+  border-color: transparent;
+  background-color: transparent;
+  text-align: left;
+  cursor: initial;
+  opacity: 1;
+  height: 80px!important;
+  text-align: center;
+  padding: 0;
+  overflow: visible;
+}
+ .diagram .sh.file a {
+  width: 100%;
+  margin-top: 45px;
+  white-space: initial;
+}
+ .diagram .sh.form {
+  padding: 0;
+  margin: 0;
+  background-image: none;
+  min-width: 100px;
+  border-color: transparent;
+  cursor: initial;
+  overflow: visible;
+  display: inline-table;
+  text-align: left;
+  line-height: 1;
+  border: 1px solid #2e6f9a;
+}
+ .diagram .sh.form .modal-content {
+  margin: 0;
+  padding: 0;
+  line-height: 0.5;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+ .diagram .sh.form .modal-content .modal-header {
+  padding: 10px;
+}
+ .diagram .sh.form .modal-content .modal-header .modal-title {
+  display: inline-block;
+  cursor: move;
+}
+ .diagram .sh.form .modal-content .modal-body {
+  margin: 0;
+}
+ .diagram .sh.page {
+  padding: 0;
+  margin: 0;
+  background-image: none;
+  min-width: 100px;
+  border-color: transparent;
+  cursor: initial;
+  overflow: visible;
+  display: inline-table;
+  text-align: left;
+  line-height: 1;
+  border: 1px solid #2e6f9a;
+}
+ .diagram .sh.page > .panel {
+  margin: 0;
+  padding: 0;
+  border-radius: 8px;
+  height: 100%;
+}
+ .diagram .sh.page > .panel > .panel-heading {
+  padding: 10px;
+}
+ .diagram .sh.page > .panel > .panel-heading > .right {
+  margin-right: 20px;
+}
+ .diagram .sh.page > .panel > .panel-heading > .panel-title {
+  display: inline-block;
+  cursor: move;
+}
+ .diagram .sh.page > .panel > .panel-body {
+  margin: 0;
+  height: 100%;
+}
+ .diagram .sh.page > .panel > .panel-body > .builder .tab-content {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+ .diagram .sh .drag-handle {
+  padding: 0;
+  margin: 0;
+  height: 10px;
+  background-color: transparent;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  right: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  cursor: move;
+  z-index: -1;
+  height: 100%;
+}
+ .diagram .sh a:hover {
+  text-decoration: none;
+}
+/* .diagram .sh.memo:hover .drag-handle    { background-color: darkorange;}*/
+ .sh {
+  background-position: 5px center;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  margin: 3px;
+  color: black;
+}
+ .w {
+  padding: 10px;
+  position: absolute;
+  border: 1px solid black;
+  z-index: 80;
+  border-radius: 1em;
+  border: 1px solid #2e6f9a;
+  border-radius: 8px;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  cursor: move;
+  background-color: white;
+  /*font-size: 11px;*/
+  -webkit-transition: background-color 0.25s ease-in;
+  -moz-transition: background-color 0.25s ease-in;
+  transition: background-color 0.25s ease-in;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  white-space: nowrap;
+  min-height: 30px;
+  min-width: 50px;
+}
+ .w:hover .ep {
+  display: block;
+}
+ .w .ep {
+  float: right;
+  width: 20px;
+  height: 20px;
+  background-color: yellow;
+  border: 1px solid darkgrey;
+  display: none;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  cursor: pointer;
+  padding: 3px;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+ .w .ep:before {
+  content: "\e178";
+}

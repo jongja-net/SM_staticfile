@@ -1,0 +1,348 @@
+<style type="text/css">
+	.btn-danger {
+		height: 32px;
+	}
+</style>
+
+<header class="ke-topmenu clearfix">
+	<ul class="nav navbar-nav">
+		<li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#/htmlviewer/60"><i class="fa  fa-file-o" aria-hidden="true"></i> 파일</a>
+
+			<ul class="dropdown-menu">
+                <!-- 
+				<li aria-command="new"><a><i class="fa fa-file-o" aria-hidden="true"></i>새로만들기</a></li>
+				<li aria-command="open"><a><i class="fa fa-folder-open-o" aria-hidden="true"></i>서식열기</a></li>
+				<li aria-command="save"><a><i class="fa fa-floppy-o" aria-hidden="true"></i>저장</a></li>
+				<li aria-command="saveAs"><a><i class="fa fa-files-o" aria-hidden="true"></i>다른 이름으로 저장</a></li>
+				<li aria-command="delete"><a><i class="fa fa-times" aria-hidden="true"></i>삭제</a></li>
+				<li role="separator" class="divider"></li>
+                -->
+				<li class="dropdown-submenu"><a><i class="fa fa-file-code-o txtGreen" aria-hidden="true"></i>내보내기<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+					<ul class="dropdown-menu">
+						<li class="dropdown-submenu" aria-command="exportToJSON" aria-value="data"><a><i class="fa fa-file-text-o txtGreen" aria-hidden="true"></i>데이터 연결 포함</a></li>
+						<li class="dropdown-submenu" role="separator" class="divider"></li>
+						<li class="dropdown-submenu" aria-command="exportToJSON" aria-value="blank"><a><i class="fa fa-file-o txtGreen" aria-hidden="true"></i>데이터 연결 제외</a></li>
+					</ul>
+				</li>
+				<li aria-command="importFromJSON"><a><i class="fa fa-file-code-o txtGreen" aria-hidden="true"></i>가져오기</a></li>
+				
+				<li aria-command="importFromXls"><a><i class="fa fa-file-excel-o" aria-hidden="true"></i>엑셀 가져오기</a></li>
+				<li aria-command="exportToXls"><a><i class="fa fa-file-excel-o" aria-hidden="true"></i>엑셀 내보내기</a></li>
+				
+				<li role="separator" class="divider"></li>
+				<li aria-command="print"><a><i class="fa fa-print" aria-hidden="true"></i>인쇄</a></li>
+				<li role="separator" class="divider"></li>
+				<li aria-command="docProperty"><a><i class="fa fa-cog" aria-hidden="true"></i>서식속성</a></li>
+			</ul>
+		</li>
+		<li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href=""><i class="fa  fa-copy" aria-hidden="true"></i> 편집</a>
+
+			<ul class="dropdown-menu">
+				<li aria-command="copy"><a><i class="fa fa-copy" aria-hidden="true"></i>복사</a></li>
+				<li aria-command="paste"><a><i class="fa fa-paste" aria-hidden="true"></i>붙여넣기</a></li>
+  				<li role="separator" class="divider"></li> 
+  				<li aria-command="spreadJson"><a><i class="fa fa-code" aria-hidden="true"></i>서식코드 미리보기</a></li>
+			</ul>
+		</li>
+		<li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href=""><i class="fa  fa-bold" aria-hidden="true"></i> 서식</a>
+
+			<ul class="dropdown-menu">
+                <li class="dropdown-submenu"><a class="fontColor"><label>가</label>  배경색/글자색<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+	                <div class="dropdown-menu" aria-hidden="true">
+		                <ul class="col-md-6 p-2">
+		                    <li class="dropdown-header">배경색</li>
+		                    <li aria-command="backColor" aria-value="rgb(190, 215, 238)" style="background-color:rgb(190, 215, 238);">표 제목</li>
+		                    <li aria-command="backColor" aria-value="rgb(247, 204, 174)" style="background-color:rgb(247, 204, 174);">입력 셀</li>
+		                    <li aria-command="backColor" aria-value="rgb(218, 218, 218)" style="background-color:rgb(218, 218, 218);">표 합계</li>
+		                    <li aria-command="backColor" aria-value="rgb(254, 230, 154)" style="background-color:rgb(254, 230, 154);">&nbsp</li>
+		                    <li aria-command="backColor" aria-value="rgb(199, 223, 180)" style="background-color:rgb(199, 223, 180);">&nbsp</li>
+		                    <li aria-command="backColor" aria-value="yellow" style="background-color:yellow;">&nbsp</li>
+		                    <li aria-command="backColor" aria-value="red" style="background-color:red;">&nbsp</li>
+		                    <li aria-command="backColor" aria-value="blue" style="background-color:blue;">&nbsp</li>
+		                    <li aria-command="backColor" aria-value="gray" style="background-color:gray;">&nbsp</li>
+		                    <li aria-command="backColor" aria-value="black" style="background-color:black;">&nbsp</li>
+		                    <li aria-command="backColor" aria-value="white" style="background-color:white;">투명</li>
+		                </ul>
+
+		                <ul class="col-md-6 p-2">
+		                    <li class="dropdown-header">글자색</li>
+		                    <li aria-command="fontColor" aria-value="rgb(31, 79, 122)" style="background-color:rgb(31, 79, 122);">&nbsp</li>
+		                    <li aria-command="fontColor" aria-value="rgb(133, 61, 11)" style="background-color:rgb(133, 61, 11);">&nbsp</li>
+		                    <li aria-command="fontColor" aria-value="rgb(82, 82, 82)" style="background-color:rgb(82, 82, 82);">&nbsp</li>
+		                    <li aria-command="fontColor" aria-value="rgb(128, 96, 0)" style="background-color:rgb(128, 96, 0);">&nbsp</li>
+		                    <li aria-command="fontColor" aria-value="rgb(58, 88, 35)" style="background-color:rgb(58, 88, 35);">&nbsp</li>
+		                    <li aria-command="fontColor" aria-value="yellow" style="background-color:yellow;">&nbsp</li>
+		                    <li aria-command="fontColor" aria-value="red" style="background-color:red;">&nbsp</li>
+		                    <li aria-command="fontColor" aria-value="blue" style="background-color:blue;">&nbsp</li>
+		                    <li aria-command="fontColor" aria-value="gray" style="background-color:gray;">&nbsp</li>
+		                    <li aria-command="fontColor" aria-value="black" style="background-color:black;">&nbsp</li>
+		                    <li aria-command="fontColor" aria-value="white" style="background-color:white;">투명</li>
+		                </ul>
+		            </div>
+                </li>
+
+
+
+				<li aria-command="bold"><a><i class="fa fa-bold" aria-hidden="true"></i>굵게</a></li>
+				<li aria-command="italic"><a><i class="fa fa-italic" aria-hidden="true"></i>비뚤기</a></li>
+				<li aria-command="lineThrough"><a><i class="fa fa-strikethrough" aria-hidden="true"></i>취소선</a></li>
+				<li aria-command="underline"><a><i class="fa fa-underline" aria-hidden="true"></i>밑줄</a></li>
+				<li role="separator" class="divider"></li>
+				<li aria-command="center-middle"><a><i class="fa fa-arrows" aria-hidden="true"></i>중앙 맞춤</a></li>
+				<li role="separator" class="divider"></li>
+				<li aria-command="align-left"><a><i class="fa fa-align-left" aria-hidden="true"></i>왼쪽 맞춤</a></li>
+				<li aria-command="align-center"><a><i class="fa fa-align-center" aria-hidden="true"></i>가운데 맞춤</a></li>
+				<li aria-command="align-right"><a><i class="fa fa-align-right" aria-hidden="true"></i>오른쪽 맞춤</a></li>
+				<li role="separator" class="divider"></li>
+				<li aria-command="align-top"><a><i class="fa fa-arrow-up" aria-hidden="true"></i>위로 맞춤</a></li>
+				<li aria-command="align-middle"><a><i class="fa fa-arrows-v" aria-hidden="true"></i>가운데 맞춤</a></li>
+				<li aria-command="align-bottom"><a><i class="fa fa-arrow-down" aria-hidden="true"></i>아래로 맞춤</a></li>
+				<li role="separator" class="divider"></li>
+				<li aria-command="textIndent"><a><i class="fa fa-indent" aria-hidden="true"></i>들여쓰기</a></li>
+				<li aria-command="textUnIndent"><a><i class="fa fa-outdent" aria-hidden="true"></i>내어쓰기</a></li>
+				<li role="separator" class="divider"></li>
+				<li aria-command="Border"><a><i class="fa fa-plus-square-o" aria-hidden="true"></i>모든 테두리</a></li>
+				<li aria-command="BorderOuter"><a><i class="fa fa-square-o" aria-hidden="true"></i>바깥쪽 테두리</a></li>
+				<li aria-command="BorderDbl"><a><i class="fa fa-square-o" aria-hidden="true"></i>굵은 바깥쪽 테두리</a></li>
+				<li aria-command="BorderDash"><a><i class="fa fa-ellipsis-h" aria-hidden="true"></i>아래쪽 점선 테두리</a></li>
+<!--                 <li role="separator" class="divider"></li> -->
+                <li aria-command="BorderEmpty"><a><i class="fa  fa-eraser" aria-hidden="true"></i>테두리지우기</a></li>
+				<li role="separator" class="divider"></li>
+				<li aria-command="Merge"><a><i class="fa fa-square" aria-hidden="true"></i>셀  병합</a></li>
+				<li aria-command="unMerge"><a><i class="fa fa-th-large" aria-hidden="true"></i>셀 분리</a></li>
+			</ul>
+		</li>
+		<li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href=""><i class="fa  fa-bookmark-o" aria-hidden="true"></i> 시트</a>
+
+			<ul class="dropdown-menu">
+				<li aria-command="cellColInsert"><a><i class="fa fa-arrow-down" aria-hidden="true"></i>열 추가</a></li>
+				<li aria-command="cellColDelete"><a><i class="fa fa-arrow-up" aria-hidden="true"></i>열 삭제</a></li>
+				<li aria-command="cellRowInsert"><a><i class="fa fa-chevron-right" aria-hidden="true"></i>행 추가</a></li>
+				<li aria-command="cellRowDelete"><a><i class="fa fa-chevron-left" aria-hidden="true"></i>행 삭제</a></li>
+				<li role="separator" class="divider"></li>
+				<li aria-command="colWidth"><a><i class="fa fa-arrows-h" aria-hidden="true"></i>열 너비</a></li>
+				<li aria-command="rowHeight"><a><i class="fa fa-arrows-v" aria-hidden="true"></i>행 높이</a></li>
+				<li role="separator" class="divider"></li>
+				<li aria-command="wordWarp"><a><i class="fa fa-text-height" aria-hidden="true"></i>아래로 여러 줄 표시</a></li>
+				<li aria-command="allowCellOverflow"><a><i class="fa fa-text-width" aria-hidden="true"></i>셀 영역 벗어나 줄 표시</a></li>
+				<li role="separator" class="divider"></li>
+				<li aria-command="frozen"><a><i class="fa fa-sort" aria-hidden="true"></i>틀고정</a></li>
+				<li aria-command="unFrozen"><a><i class="fa fa-square" aria-hidden="true"></i>틀고정취소</a></li>
+				<li role="separator" class="divider"></li>
+				<li aria-command="cellLock"><a><i class="fa fa-lock" aria-hidden="true"></i>셀 잠금</a></li>
+				<li role="separator" class="divider"></li>
+				<li aria-command="dlgCustomNameFind"><a><i class="fa fa-book" aria-hidden="true"></i>이름관리자</a></li>
+                <li aria-command="dlgDataSetFind"><a><i class="fa fa-book" aria-hidden="true"></i>데이터관리자</a></li>
+				<li aria-command="sheetProperty"><a><i class="fa fa-cog" aria-hidden="true"></i>시트속성</a></li>
+			</ul>
+		</li>
+		<li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href=""><i class="fa  fa-database" aria-hidden="true"></i> 데이터</a>
+
+			<ul class="dropdown-menu">
+				
+				<li aria-command="tableDraw"><a><i class="fa fa-table" aria-hidden="true"></i>표 그리기</a></li>
+				<li role="separator" class="divider"></li>
+				<li aria-command="table"><a><i class="fa fa-table" aria-hidden="true"></i>표 삽입</a></li>
+				<li aria-command="removeTable"><a><i class="fa fa-eraser" aria-hidden="true"></i>표 삭제</a></li>
+				<li role="separator" class="divider"></li>
+				<li aria-command="tableProperty"><a><i class="fa fa-cog" aria-hidden="true"></i>표 속성</a></li>
+				<li aria-command="columnInsert"><a><i class="fa fa-plus" aria-hidden="true"></i>표 컬럼 추가</a></li>
+				<li aria-command="columnDelete"><a><i class="fa fa-minus" aria-hidden="true"></i>표 컬럼 삭제</a></li>
+                <li role="separator" class="divider"></li>
+				<li aria-command="dlgTableFromSql"><a><i class="fa fa-database" aria-hidden="true"></i>SQL기반 표 데이터 연결 설정</a></li>
+				<li aria-command="dlgCsvFromSql"><a><i class="fa fa-database" aria-hidden="true"></i>SQL기반 데이터 연결 설정</a></li>
+				<li role="separator" class="divider"></li>
+				<li aria-command="dlgCellFromSql"><a><i class="fa fa-database" aria-hidden="true"></i>셀 데이터 연결 설정</a></li>
+				<li role="separator" class="divider"></li>
+				<li aria-command="setDataBind"><a><i class="fa fa-refresh txtGreen" aria-hidden="true"></i>데이터 새로고침</a></li>
+				<li aria-command="clearDataBind"><a><i class="fa fa-refresh txtBlack" aria-hidden="true"></i>데이터 지우기</a></li>
+			</ul>
+		</li>
+		<li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href=""><i class="fa  fa-check-square-o" aria-hidden="true"></i> 도구</a>
+
+			<ul class="dropdown-menu">
+				<li aria-command="button" title="파일첨부 버튼을 서식에 삽입합니다."><a><i class="fa fa-upload" aria-hidden="true"></i>파일버튼 삽입</a></li>
+				<li aria-command="addRow" title="행추가 버튼을 서식에 삽입합니다."><a><i class="fa fa-indent" aria-hidden="true"></i>행추가버튼 삽입</a></li>
+ 				<li aria-command="btnDataRefresh" title="데이터새로고침 바턴을  서식에 삽입합니다."><a><i class="fa fa-refresh txtGreen" aria-hidden="true"></i>검색버튼 삽입</a></li>
+				<li aria-command="CheckBoxCellType" aria-value="CheckBoxCellType" title="체크박스를 서식에 삽입합니다." ><a><i class="fa fa-check-square-o" aria-hidden="true"></i>체크박스 삽입</a></li>
+				<li aria-command="ComboBoxCellType" aria-value="ComboBoxCellType" title="선택박스를 서식에 삽입합니다." ><a><i class="fa fa-bars" aria-hidden="true"></i>선택박스 삽입</a></li>
+				<li aria-command="FormulaListValidator" aria-value="FormulaListValidator" title="셀영역 참조 선택박스를 서식에 삽입합니다." ><a><i class="fa fa-external-link" aria-hidden="true"></i>셀참조 선택박스 삽입</a></li>
+				<li aria-command="textarea" title="메모박스를 삽입합니다."><a><i class="fa fa-text-height" aria-hidden="true"></i>메모박스 삽입</a></li>
+				<li role="separator" class="divider"></li>
+				<li aria-command="eraser"><a><i class="fa fa-magic" aria-hidden="true"></i>셀 초기화</a></li>
+				<li role="separator" class="divider"></li>
+<!-- 				<li aria-command="spreadJson"><a><i class="fa fa-code" aria-hidden="true"></i>서식코드 미리보기</a></li> -->
+<!-- 				<li role="separator" class="divider"></li> -->
+				<li aria-command="preViewer"><a><i class="fa fa-plane" aria-hidden="true"></i>사용자모드 미리보기</a></li>
+			</ul>
+		</li>
+<!-- 		<li class="dropdown"> -->
+<!-- 			<a class="dropdown-toggle" data-toggle="dropdown" href=""><i class="fa  fa-video-camera txtRed" aria-hidden="true"></i> 동영상메뉴얼</a> -->
+
+<!-- 			<ul class="dropdown-menu video"> -->
+<!-- 				<li class="dropdown-header p-0"> -->
+<!-- 				<h4>K-EDITOR 학습비디오(동영상 준비중...  예시화면임)<button class="btn play">Play/Pause</button></h4> -->
+<!-- 				 <video width="800"><source src="/hr/NUSS_UI/hr/lib/keditor.mp4" type="video/mp4"></video> -->
+<!-- 				</li> -->
+<!-- 			</ul> -->
+<!-- 		</li> -->
+	</ul>
+
+	<div class="btn-toolbar">
+        <!--
+		<div class="btn-group" >
+			<a class="btn btn-default" aria-command="open" title="서식열기"><i class="fa fa-folder-open-o" aria-hidden="true"></i></a>
+			<a class="btn btn-default" aria-command="save" title="저장"><i class="fa fa-floppy-o" aria-hidden="true"></i></a>
+		</div>
+        -->
+
+		<div class="btn-group">
+			<a type="button" class="btn btn-default" aria-command="copy" title="복사"><i class="fa  fa-copy" aria-hidden="true"></i></a>
+			<a type="button" class="btn btn-default" aria-command="paste" title="붙여넣기"><i class="fa fa-paste" aria-hidden="true"></i></a>
+			<a type="button" class="btn btn-default" aria-command="eraser" title="셀에 내용을 지우고 초기화 합니다."><i class="fa fa-magic txtYellow" aria-hidden="true"></i></a>
+		</div>
+
+        <div class="btn-group">
+            <div class="btn-group"  role="group">
+                <a type="button" class="btn btn-danger fontName"  title="셀 글꼴">HY견고딕</a>
+                <a type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"  title="글꼴"><span class="caret"></span></a>
+
+                <ul class="dropdown-menu">
+                    <li aria-command="fontName" aria-value="HY견고딕"><a>HY견고딕</a></li>
+                    <li aria-command="fontName" aria-value="맑은 고딕"><a>맑은 고딕</a></li>
+                    <li aria-command="fontName" aria-value="휴먼둥근헤드라인"><a>휴먼둥근헤드라인</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li aria-command="fontName" aria-value="굴림체"><a>굴림체</a></li>
+                    <li aria-command="fontName" aria-value="궁서체"><a>궁서체</a></li>
+                </ul>
+            </div>
+
+            <div class="btn-group"  role="group">
+                <input type="textn" class="btn btn-danger fontSize"  title="셀 글자 크기" value="12" />
+                <a type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="글자 크기"><span class="caret"></span></a>
+
+                <ul class="dropdown-menu">
+                    <li aria-command="fontSize" aria-value="8" ><a>8</a></li>
+                    <li aria-command="fontSize" aria-value="9" ><a>9</a></li>
+                    <li aria-command="fontSize" aria-value="11" ><a>11</a></li>
+                    <li aria-command="fontSize" aria-value="12"><a>12</a></li>
+                    <li aria-command="fontSize" aria-value="14"><a>14</a></li>
+                    <li aria-command="fontSize" aria-value="18"><a>18</a></li>
+                    <li aria-command="fontSize" aria-value="24"><a>24</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="btn-group"  data-toggle="buttons">
+            <a type="button" class="btn btn-default fontColor" data-toggle="dropdown" aria-expanded="true" title="배경색/글자색"><label>가</label></a>
+            <div class="dropdown-menu" aria-hidden="true">
+                <ul class="col-md-6 p-2">
+                    <li class="dropdown-header">배경색</li>
+                    <li aria-command="backColor" aria-value="rgb(190, 215, 238)" style="background-color:rgb(190, 215, 238);">표 제목</li>
+                    <li aria-command="backColor" aria-value="rgb(247, 204, 174)" style="background-color:rgb(247, 204, 174);">입력 셀</li>
+                    <li aria-command="backColor" aria-value="rgb(218, 218, 218)" style="background-color:rgb(218, 218, 218);">표 합계</li>
+                    <li aria-command="backColor" aria-value="rgb(254, 230, 154)" style="background-color:rgb(254, 230, 154);">&nbsp</li>
+                    <li aria-command="backColor" aria-value="rgb(199, 223, 180)" style="background-color:rgb(199, 223, 180);">&nbsp</li>
+                    <li aria-command="backColor" aria-value="yellow" style="background-color:yellow;">&nbsp</li>
+                    <li aria-command="backColor" aria-value="red" style="background-color:red;">&nbsp</li>
+                    <li aria-command="backColor" aria-value="blue" style="background-color:blue;">&nbsp</li>
+                    <li aria-command="backColor" aria-value="gray" style="background-color:gray;">&nbsp</li>
+                    <li aria-command="backColor" aria-value="black" style="background-color:black;">&nbsp</li>
+                    <li aria-command="backColor" aria-value="white" style="background-color:white;">투명</li>
+                </ul>
+
+                <ul class="col-md-6 p-2">
+                    <li class="dropdown-header">글자색</li>
+                    <li aria-command="fontColor" aria-value="rgb(31, 79, 122)" style="background-color:rgb(31, 79, 122);">&nbsp</li>
+                    <li aria-command="fontColor" aria-value="rgb(133, 61, 11)" style="background-color:rgb(133, 61, 11);">&nbsp</li>
+                    <li aria-command="fontColor" aria-value="rgb(82, 82, 82)" style="background-color:rgb(82, 82, 82);">&nbsp</li>
+                    <li aria-command="fontColor" aria-value="rgb(128, 96, 0)" style="background-color:rgb(128, 96, 0);">&nbsp</li>
+                    <li aria-command="fontColor" aria-value="rgb(58, 88, 35)" style="background-color:rgb(58, 88, 35);">&nbsp</li>
+                    <li aria-command="fontColor" aria-value="yellow" style="background-color:yellow;">&nbsp</li>
+                    <li aria-command="fontColor" aria-value="red" style="background-color:red;">&nbsp</li>
+                    <li aria-command="fontColor" aria-value="blue" style="background-color:blue;">&nbsp</li>
+                    <li aria-command="fontColor" aria-value="gray" style="background-color:gray;">&nbsp</li>
+                    <li aria-command="fontColor" aria-value="black" style="background-color:black;">&nbsp</li>
+                    <li aria-command="fontColor" aria-value="white" style="background-color:white;">투명</li>
+                </ul>
+            </div>
+        </div>
+        <div class="btn-group"  data-toggle="buttons">
+            <label class="btn btn-default" aria-command="bold"  title="진하게"><input type="checkbox" autocomplete="off"><i class="fa  fa-bold" aria-hidden="true"></i></label>
+            <label class="btn btn-default" aria-command="lineThrough"  title="밑줄"><input type="checkbox" autocomplete="off"><i class="fa fa-strikethrough" aria-hidden="true"></i></label>
+        </div>
+
+		<div class="btn-group">
+			<a type="button" class="btn btn-default" data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false" title="선택된 영역의 테두리를 그립니다"><i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+
+			<ul class="dropdown-menu">
+				<li aria-command="Border"><a><i class="fa fa-plus-square-o" aria-hidden="true"></i>모든 테두리</a></li>
+				<li aria-command="BorderOuter"><a><i class="fa fa-square-o" aria-hidden="true"></i>바깥쪽 테두리</a></li>
+				<li aria-command="BorderDbl"><a><i class="fa fa-square-o" aria-hidden="true"></i>굵은 바깥쪽 테두리</a></li>
+				<li aria-command="BorderDash"><a><i class="fa fa-ellipsis-h" aria-hidden="true"></i>아래쪽 점선 테두리</a></li>
+				<li role="separator" class="divider"></li>
+				<li aria-command="BorderEmpty"><a><i class="fa  fa-eraser" aria-hidden="true"></i>지우기</a></li>
+			</ul>
+
+	        <div class="btn-group">
+	            <a type="button" class="btn btn-default" aria-command="Merge" title="셀 병합"><i class="fa fa-square" aria-hidden="true"></i></a>
+	            <a type="button" class="btn btn-default" aria-command="unMerge" title="셀 분리"><i class="fa fa-th-large" aria-hidden="true"></i></a>
+	        </div>
+
+            <a type="button" class="btn btn-default" aria-command="center-middle" title="중앙 맞춤"><i class="fa fa-arrows" aria-hidden="true"></i></a>
+
+	        <div class="btn-group">
+	            <a type="button" class="btn btn-default" aria-command="align-left" title="왼쪽 맞춤"><i class="fa  fa-align-left" aria-hidden="true"></i></a>
+	            <a type="button" class="btn btn-default" aria-command="align-center" title="가운데 맞춤"><i class="fa fa-align-center" aria-hidden="true"></i></a>
+	            <a type="button" class="btn btn-default" aria-command="align-right" title="오른쪽 맞춤"><i class="fa fa-align-right" aria-hidden="true"></i></a>
+	        </div>
+
+		</div>
+
+		<div class="btn-group" title="표시형식">
+			<input type="text" class="btn btn-danger formatter" value=""  title="표시형식포멧" />
+			<a type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="표시형식"><span class="caret"></span></a>
+
+			<ul class="dropdown-menu">
+				<li aria-command="formatter" aria-value="" ><a>일반</a></li>
+				<li aria-command="formatter" aria-value="#,###" ><a>숫자</a></li>
+				<li aria-command="formatter" aria-value="#,##0.00" ><a>화폐</a></li>
+				<li aria-command="formatter" aria-value="\#,##0.00" ><a>화폐(원)</a></li>
+				<li aria-command="formatter" aria-value="$#,##0.00" ><a>화폐(달러)</a></li>
+				<li aria-command="formatter" aria-value="yyyy-MM-dd" ><a>날짜</a></li>
+				<li aria-command="formatter" aria-value="yy-MM-dd" ><a>짦은날짜</a></li>
+				<li aria-command="formatter" aria-value="yyyy'년' m'월' d'일'" ><a>날짜(한국)</a></li>
+				<li aria-command="formatter" aria-value="0%" ><a>백분율(%)</a></li>
+				<li aria-command="formatter" aria-value="@" ><a>문자</a></li>
+			</ul>
+		</div>
+
+
+        <div class="btn-group"  data-toggle="buttons">
+            <label class="btn btn-default" aria-command="cellLock" title="셀 잠금"><input type="checkbox" autocomplete="off"><i class="fa fa-lock" aria-hidden="true"></i></label>
+        </div>
+
+        <div class="btn-group">
+<!--            <a type="button" class="btn btn-default" aria-command="tableDraw" title="선택된 영역을 표로 전환합니다"><i class="fa fa-table" aria-hidden="true"></i></a> -->
+            <a class="btn btn-default" aria-command="dlgCsvFromView" title="뷰기반 데이터 연결 설정"><i class="fa fa-database" aria-hidden="true"></i></a>
+            <a class="btn btn-default" aria-command="setDataBind" title="표 데이터를 새로고침 합니다."><i class="fa  fa-refresh txtCyan" aria-hidden="true"></i></a>
+            <a class="btn btn-default" aria-command="clearDataBind" title="표 데이터를 지웁니다"><i class="fa  fa-refresh txtBlack" aria-hidden="true"></i></a>
+        </div>
+
+<!--
+		<div class="btn-group"  data-toggle="buttons">
+ 			<label class="btn btn-default" aria-command="editMode-table" title="표모드" ><input type="radio" name="editMode" ><i class="fa  fa-table" aria-hidden="true"></i></label>
+			<label class="btn btn-default" aria-command="editMode-pencil" title="편집모드" ><input type="radio" name="editMode" ><i class="fa fa-pencil" aria-hidden="true"></i></label>
+		</div>
+ -->
+		<div class="btn-group">
+			<a type="button" class="btn btn-default" aria-command="preViewer"  title="사용자모드 미리보기"><i class="fa fa-plane txtYellow"></i></a>
+		</div>
+	</div>
+</header>

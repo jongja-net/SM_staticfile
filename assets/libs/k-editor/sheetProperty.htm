@@ -1,0 +1,137 @@
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title">시트속성</h4>
+		</div>
+		<div class="modal-body SaaS">
+			<div class="form-group">
+				<label for="sheetName">시트명</label>
+				<input type="text" class="form-control" name="sheetName" placeholder="시트명">
+			</div>
+			<div class="form-group">
+				<label for="columnCount">열 수 (Column Count)</label>
+				<input type="text" class="form-control" name="columnCount" placeholder="ColumnCount" >
+			</div>
+			<div class="form-group">
+				<label for="rowCount">행 수(Row Count  )</label>
+				<input type="text" class="form-control" name="rowCount" placeholder="RowCount" >
+			</div>
+			<div class="form-group">
+				<label><input type="checkbox" class="chkGridLine"> 눈금선</label>
+			</div>
+            <div class="form-group">
+                <label><input type="checkbox" class="chkUsedHide"> 사용자뷰 감추기</label>
+            </div>
+			<div class="form-group">
+				<label><input type="checkbox" class="selectUnlockedCell">서식 조회 시 편집셀만 선택가능</label>
+			</div>
+
+		</div>
+		<div class="modal-footer">
+			<button type="button" role="delete" class="btn btn-warning left" data-dismiss="modal" style="float:left;">시트삭제</button>
+			<button type="button" role="save" class="btn btn-primary" data-dismiss="modal">확인</button>
+			<button type="button" role="close" class="btn btn-default" data-dismiss="modal">닫기</button>
+		</div>
+	</div>
+</div>
+<i id='elTrace'></i>
+
+<script>
+	$("#elTrace").closest('.modal').data("modal", (function () {
+	   	/* 공통역역  ------------ start ----------------- */
+		var
+			 dform = $("#elTrace").closest('.modal')
+			,kid   = dform.closest(".modal[keditor]").attr("keditor")
+            ,formName   = dform.attr("name")
+			,el = Jinja.KEditors[kid]
+		;
+
+		$("#elTrace").remove();
+	   	/* 공통역역  ------------ end ----------------- */
+
+	   	var
+			sheet = el.spread.getActiveSheet()
+		;
+
+	   	console.log("sheet.getName :: " + sheet.getName());
+
+        dform.on('show.bs.modal', function (e) {
+            dform.find("input[name='sheetName']").val(sheet.getName());
+            dform.find("input[name='columnCount']").val(sheet.getColumnCount());
+            dform.find("input[name='rowCount']").val(sheet.getRowCount());
+            if (el.spread.toJSON().sheets[sheet._name].gridline){
+                dform.find("input.chkGridLine").prop("checked", el.spread.toJSON().sheets[sheet._name].gridline.showVerticalGridline);
+            }
+
+            if (el.exportSet.UsedHide){
+            	dform.find("input.chkUsedHide").prop("checked", el.exportSet.UsedHide[sheet.getName()]);
+            }
+
+
+        }).on('hide.bs.modal', function (e) {
+            delete el.modals[formName];
+            dform.remove();
+        })
+		dform.modal();
+
+		$('[role="delete"]',dform).click(function(e){
+			var activeIndex = el.spread.getActiveSheetIndex();
+
+			if (activeIndex >= 0) {
+				STD.Mssage.message(this,"CM0037","delDoc",function(mId){
+					if(mId == "delDocTrue"){
+			            el.spread.removeSheet(activeIndex);
+					}
+				});
+	        }
+	    });
+
+		$('[role="save"]',dform).click(function(e){
+			sheet.setName(dform.find("input[name='sheetName']").val());
+			sheet.setColumnCount(dform.find("input[name='columnCount']").val());
+			sheet.setRowCount(dform.find("input[name='rowCount']").val());
+
+			var bchk = dform.find(".chkGridLine").is(":checked");
+
+			sheet.setGridlineOptions({color:"#d7dae0", showVerticalGridline: bchk, showHorizontalGridline: bchk});
+
+			var allowSelectLockedCells = true;
+			var allowSelectUnlockedCells = true;
+
+			if (dform.find(".selectUnlockedCell").is(":checked")){
+				allowSelectLockedCells = false;
+				allowSelectUnlockedCells = true;
+			}
+
+			sheet.protectionOption({
+				"allowSelectLockedCells":allowSelectLockedCells,
+				"allowSelectUnlockedCells": allowSelectUnlockedCells
+			});
+
+            if (dform.find(".chkUsedHide").is(":checked")){
+            	/* 사용자영역감추기 */
+            	if (!el.exportSet.UsedHide){
+            	   el.exportSet.UsedHide = {}
+            	}
+                el.exportSet.UsedHide[dform.find("input[name='sheetName']").val()] = true;
+            } else {
+                if (el.exportSet.UsedHide){
+                	delete el.exportSet.UsedHide[dform.find("input[name='sheetName']").val()];
+                 }
+
+            }
+
+	    });
+
+		dform.modal('show');
+
+		return {
+	        whois: function () {
+	            /* 함수사용법을 정의합니다*/
+	            alert("폼속성입니다");
+	            return "jj";
+	        }
+	    }
+	}).call(this));
+</script>
